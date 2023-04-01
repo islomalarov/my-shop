@@ -1,0 +1,12 @@
+<header class="header">
+    <div class="header__container container">
+       <nav class="header__nav">
+            <ul class="header__menu">
+                <li><a class="header__menu-link" routerLink="/">Main</a></li>
+                <li><a class="header__menu-link" routerLink="/about">About</a></li>
+                <li><a class="header__menu-link" routerLink="/contacts">Contacts</a></li>
+            </ul>
+            <button (click)="service.isBasketModal = !service.isBasketModal" *ngIf="service.arrBuys.length" class="header__nav-basket">Basket</button>
+       </nav>
+    </div>
+</header>

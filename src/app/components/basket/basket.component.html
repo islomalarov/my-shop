@@ -1,0 +1,12 @@
+<div class="basket__modal" >
+    <div class="basket__content">
+     <h3>{{buy.name}}</h3>
+     <img [src]="buy.cover" alt="img" class="cards__item-cover">
+     <p>модель: {{buy.model}}</p>
+     <p>цена: {{buy.price}}</p>
+     <p>количество:
+         <input type="number" min="1" name="" id="" [(ngModel)]="buy.qty" class="basket__content-input">
+     </p>
+     <p>характеристики: {{buy.characteristics}}</p>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<main>
+    <section class="basket" *ngIf="items.isBasketModal">
+        <div class="basket__container container">
+            <div class="basket__actions">
+                <button class="basket__actions-btn" (click)="items.clearBuys()">Очистить корзину </button>
+                <button class="basket__actions-btn" (click)="items.buyItems()">Заказать товары </button>
+            </div>
+            <div class="basket__price">
+                <h3>Total Price </h3>
+                <span> {{items.totalPrice() | currency:'$':'symbol':'3.0'}}</span>
+            </div>
+            <app-basket *ngFor="let buy of items.arrBuys" [buy]="buy"></app-basket>
+        </div>
+    </section>
+    <section class="cards" [ngClass]="items.isBasketModal? 'active' : ''">
+        <div class="cards__container container">
+            <div class="cards__content">
+                <app-card *ngFor="let item of items.arrItems" [item]="item"></app-card>
+            </div>
+        </div>
+    </section>
+</main>

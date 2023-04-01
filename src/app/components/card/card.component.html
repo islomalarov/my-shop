@@ -1,0 +1,15 @@
+<div class="cards__item">
+    <h3>{{item.name}}</h3>
+    <div class="cards__item-cover">
+        <img [src]="item.cover" alt="img">
+    </div>
+    <p>модель: {{item.model}}</p>
+    <p>цена: {{item.price}}</p>
+    <p>количество: {{item.qty}}</p>
+    <p>характеристики: {{item.characteristics}}</p>
+    <button class="cards__item-btn" (click)="service.addBasket(item)" *ngIf="!item.isBuy; else elseBlock">Купить
+    </button>
+    <ng-template #elseBlock>
+        <button class="cards__item-btn active" *ngIf="item.isBuy">Товар в корзине</button>
+    </ng-template>
+</div>

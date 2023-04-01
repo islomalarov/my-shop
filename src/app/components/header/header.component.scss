@@ -1,0 +1,32 @@
+.header {
+    position: relative;
+    background-color: rgb(209, 96, 96);
+
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        flex-basis: 80%;
+
+        &-link {
+            font-size: 20px;
+            color: white;
+        }
+
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-basket {
+            padding: 10px;
+            font-size: 20px;
+            color: white;
+            margin: 0 20px;
+            background: none;
+            cursor: pointer;
+        }
+    }
+}

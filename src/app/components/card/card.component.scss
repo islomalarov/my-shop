@@ -1,0 +1,45 @@
+@use "sass:math";
+
+.cards {
+   
+    &__item {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        border: 1px solid rgb(226, 43, 70);
+
+        &-cover {
+            position: relative;
+            overflow: hidden;
+            padding-bottom: math.div(500, 800) * 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                z-index: -1;
+                left: 0;
+                top: 0;
+            }
+        }
+
+        &-btn {
+            background: none;
+            border: 1px solid red;
+            padding: 20px;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 10px;
+
+            &:hover {
+                background: #3cd141;
+            }
+            &.active{
+                background: #3cd141;
+
+            }
+        }
+    }
+}
